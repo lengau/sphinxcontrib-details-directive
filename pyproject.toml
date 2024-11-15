@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=61.2", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sphinxcontrib-details-directive"
+version = "0.2.0"
+# dynamic = ["version"]
+description = "\"details\" directive for Sphinx"
+readme = "README.rst"
+authors = [
+    { name = "Takeshi KOMIYA", email = "i.tkomiya@gmail.com" },
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Framework :: Sphinx :: Extension",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.7",
+    "Topic :: Documentation",
+    "Topic :: Documentation :: Sphinx",
+    "Topic :: Utilities",
+]
+dependencies = [
+    "Sphinx>=2.0",
+]
+
+[project.optional-dependencies]
+test = [
+    "flake8",
+    "flake8-import-order",
+    "mypy",
+    "pytest",
+    "tox",
+]
+
+[project.urls]
+Homepage = "https://github.com/tk0miya/sphinxcontrib-details-directive/"
+
+[tool.hatch.version]
+path = "sphinxcontrib/__init__.py"
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "/sphinxcontrib",
+]

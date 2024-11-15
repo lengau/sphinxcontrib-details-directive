@@ -12,7 +12,7 @@ from docutils.parsers.rst import Directive, directives
 from sphinx.transforms.post_transforms import SphinxPostTransform
 from sphinx.util.nodes import NodeMatcher
 
-from sphinxcontrib.details.directive.version import __version__
+__version__ = "0.2.0"
 
 
 class details(nodes.Element, nodes.General):
